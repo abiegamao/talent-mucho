@@ -9,12 +9,12 @@ import {
 export const metadata: Metadata = {
   title: "Events & Workshops",
   description:
-    "Live workshops, trainings, and bootcamps from Talent Mucho. Cohort 1 of the AI Business Bootcamp starts June 2, 2026. Past events and replays live in our free Skool community.",
+    "Live workshops, trainings, and bootcamps from Talent Mucho. Cohort 1 of the AI Business Bootcamp starts June 5, 2026. Past events and replays live in our free Skool community.",
   alternates: { canonical: "/events" },
   openGraph: {
     title: "Events & Workshops | Talent Mucho",
     description:
-      "Live workshops, trainings, and bootcamps. Bootcamp Cohort 1 starts June 2. Replays of past events in the free Skool.",
+      "Live workshops, trainings, and bootcamps. Bootcamp Cohort 1 starts June 5. Replays of past events in the free Skool.",
     url: "/events",
     type: "website",
     images: [
@@ -48,7 +48,7 @@ interface EventEntry {
 const upcoming: EventEntry[] = [
   {
     status: "upcoming",
-    date: "Tue, Jun 2 ~ Tue, Jul 1, 2026",
+    date: "Fri, Jun 5 ~ Sun, Jun 28, 2026",
     dateRange: "9 sessions over 4 weeks",
     format: "Live on Zoom · Small group",
     title: "AI Business Bootcamp",
@@ -57,7 +57,7 @@ const upcoming: EventEntry[] = [
     description:
       "One month. Three tools. A business that runs differently. 9 live sessions, four real deliverables you walk away with, VIP bundle included free.",
     highlights: [
-      "Tue & Thu · 4–7 PM CEST · 3 hrs each",
+      "8 live sessions · Sat & Sun · 10 AM–1 PM EST (4–7 PM CEST · 10 PM–1 AM PHT)",
       "Week 1: 3 Claude Projects · Week 2: AI employee · Week 3: Custom dashboard · Week 4: Daily routine",
       "VIP bundle included free (€397 value)",
       "€247 founding price ~ Cohort 2 opens at €397",
@@ -230,7 +230,7 @@ export default function EventsIndexPage() {
               </h2>
               <p className="text-espresso-800 font-light leading-relaxed mb-6">
                 Every new workshop, training, and bootcamp gets announced inside Skool first ~
-                with reminders, replays, and a place to ask questions. Free to join, 300+ members already.
+                with reminders, replays, and a place to ask questions. Free to join, 560+ members already.
               </p>
 
               <ul className="flex flex-col gap-3 mb-8">
@@ -238,7 +238,7 @@ export default function EventsIndexPage() {
                   { icon: <Bell className="w-3.5 h-3.5" />, text: "First to hear about new cohorts and workshops" },
                   { icon: <PlayCircle className="w-3.5 h-3.5" />, text: "Free replays of past public events" },
                   { icon: <BookOpen className="w-3.5 h-3.5" />, text: "Workbook + prompt vault from each event" },
-                  { icon: <Users className="w-3.5 h-3.5" />, text: "300+ members posting wins and questions weekly" },
+                  { icon: <Users className="w-3.5 h-3.5" />, text: "560+ members posting wins and questions weekly" },
                 ].map((b) => (
                   <li key={b.text} className="flex items-start gap-3">
                     <span className="w-6 h-6 rounded-md bg-clay-500/10 flex items-center justify-center shrink-0 mt-0.5 text-clay-500">
@@ -268,7 +268,7 @@ export default function EventsIndexPage() {
                 className="text-5xl md:text-6xl font-light text-beige-50 leading-none mb-2"
                 style={{ fontFamily: "var(--font-cormorant), ui-serif, Georgia, serif" }}
               >
-                300+
+                560+
               </p>
               <p className="text-sm text-beige-300 font-light mb-8">members &amp; growing</p>
 

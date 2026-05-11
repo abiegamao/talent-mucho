@@ -8,7 +8,7 @@ import {
 
 export const metadata: Metadata = {
   title: "You're in ~ Cohort 1",
-  description: "Welcome to Cohort 1 of the AI Business Bootcamp. Here's everything you need before Tue, Jun 2.",
+  description: "Welcome to Cohort 1 of the AI Business Bootcamp. Here's everything you need before Fri, Jun 5.",
   robots: { index: false, follow: false },
 };
 
@@ -17,15 +17,15 @@ const FREE_SKOOL_URL = "https://www.skool.com/future-proof-with-ai-4339/about?re
 const PIN = "2028";
 
 const schedule = [
-  { tag: "Kickoff", date: "Tue, Jun 2", topic: "Welcome, orientation, Claude.ai setup" },
-  { tag: "W1·S1", date: "Thu, Jun 5", topic: "Interface, Projects, your first conversation" },
-  { tag: "W1·S2", date: "Tue, Jun 10", topic: "Custom instructions, file uploads" },
-  { tag: "W2·S3", date: "Thu, Jun 12", topic: "AI employees ~ what Cowork makes real" },
-  { tag: "W2·S4", date: "Tue, Jun 17", topic: "Build & test your first AI employee" },
-  { tag: "W3·S5", date: "Thu, Jun 19", topic: "Claude Code ~ your first build" },
-  { tag: "W3·S6", date: "Tue, Jun 24", topic: "Build your business dashboard" },
-  { tag: "W4·S7", date: "Thu, Jun 26", topic: "Your full Claude stack working together" },
-  { tag: "W4·S8", date: "Tue, Jul 1", topic: "Showcases & graduation" },
+  { tag: "Kickoff", date: "Fri, Jun 5", topic: "Welcome, orientation, Claude.ai setup" },
+  { tag: "W1·S1", date: "Sat, Jun 6", topic: "Interface, Projects, your first conversation" },
+  { tag: "W1·S2", date: "Sun, Jun 7", topic: "Custom instructions, file uploads" },
+  { tag: "W2·S3", date: "Sat, Jun 13", topic: "AI employees ~ what Cowork makes real" },
+  { tag: "W2·S4", date: "Sun, Jun 14", topic: "Build & test your first AI employee" },
+  { tag: "W3·S5", date: "Sat, Jun 20", topic: "Claude Code ~ your first build" },
+  { tag: "W3·S6", date: "Sun, Jun 21", topic: "Build your business dashboard" },
+  { tag: "W4·S7", date: "Sat, Jun 27", topic: "Your full Claude stack working together" },
+  { tag: "W4·S8", date: "Sun, Jun 28", topic: "Showcases & graduation" },
 ];
 
 const happensNext = [
@@ -43,7 +43,7 @@ const happensNext = [
   },
   {
     icon: <Calendar className="w-4 h-4" />,
-    when: "Before Tue, Jun 2",
+    when: "Before Fri, Jun 5",
     title: "Calendar invites for all 9 sessions",
     desc: "We'll send a single invite that drops all 9 sessions onto your calendar. You can decline what you can't attend.",
   },
@@ -100,7 +100,7 @@ export default function BootcampWelcomePage() {
 
             <p className="text-lg md:text-xl text-beige-200 font-light leading-relaxed max-w-2xl mx-auto mb-9">
               Big breath. The hardest part is done ~ you&apos;ve committed. Now bookmark this page,
-              read what&apos;s next, and we&apos;ll see you live on <span className="font-semibold text-beige-50">Tuesday, June 2</span>.
+              read what&apos;s next, and we&apos;ll see you live on <span className="font-semibold text-beige-50">Friday, June 5</span>.
             </p>
 
             <Link
@@ -227,13 +227,13 @@ export default function BootcampWelcomePage() {
                   className="text-2xl md:text-3xl font-light text-beige-50 leading-tight"
                   style={{ fontFamily: "var(--font-cormorant), ui-serif, Georgia, serif" }}
                 >
-                  While you wait for Jun 2, <em className="italic text-clay-500">hang out in the free Skool.</em>
+                  While you wait for Jun 5, <em className="italic text-clay-500">hang out in the free Skool.</em>
                 </p>
               </div>
             </div>
 
             <p className="text-beige-200 font-light leading-relaxed mb-7">
-              The free community has 300+ members ~ replays from past events, the prompt vault,
+              The free community has 560+ members ~ replays from past events, the prompt vault,
               and Abie&apos;s growing playbook library. Lurk, scroll, drop a hi. You&apos;ll know
               the room before Kickoff.
             </p>
@@ -267,7 +267,7 @@ export default function BootcampWelcomePage() {
               All 9 sessions.
             </h2>
             <p className="text-center text-espresso-800 font-light mb-10">
-              Tue &amp; Thu · 4–7 PM CEST · 3 hrs each. Calendar invites land before Kickoff.
+              Sat &amp; Sun · 10 AM–1 PM EST · 3 hrs each. Calendar invites land before Kickoff.
             </p>
 
             <div className="bg-white border border-beige-200 rounded-2xl overflow-hidden">
@@ -307,14 +307,14 @@ export default function BootcampWelcomePage() {
               of what we said we&apos;d deliver.
             </p>
             <p className="text-beige-200 font-light leading-relaxed mb-5">
-              We&apos;re going to deliver. By Jul 1 you&apos;ll have a Claude stack running inside
+              We&apos;re going to deliver. By Jun 28 you&apos;ll have a Claude stack running inside
               your business and a daily routine that compounds. That&apos;s the whole bet.
             </p>
             <p
               className="text-beige-50 text-lg font-light italic mt-8"
               style={{ fontFamily: "var(--font-cormorant), ui-serif, Georgia, serif" }}
             >
-              See you Tuesday, June 2.
+              See you Friday, June 5.
             </p>
             <p className="text-sm text-beige-300/70 font-light mt-3">
               ~ Abie &amp; Meri

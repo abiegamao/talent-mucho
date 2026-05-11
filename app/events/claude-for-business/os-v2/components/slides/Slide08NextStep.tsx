@@ -143,7 +143,7 @@ const THREE_DOORS: DoorOption[] = [
     bestFor:
       "You're curious. Not ready to commit. Totally valid ~ tonight already moved you forward.",
     whatYouGet: [
-      "Free Skool community ~ 300+ already in",
+      "Free Skool community ~ 560+ already in",
       "Tonight's freebie drop at midnight ~ every prompt and framework cleaned up",
       "Abie's AI Playbooks ~ free and growing every week",
     ],
@@ -163,7 +163,7 @@ const THREE_DOORS: DoorOption[] = [
     bestFor:
       "You want the ongoing support without the intensive. Or you want to join the bootcamp later with the discount locked.",
     whatYouGet: [
-      "Weekly live group calls ~ starts Tue Jun 2",
+      "Weekly live group calls ~ starts Fri Jun 5",
       "Full replay vault ~ everything we've ever built",
       "Vibe coding sessions ~ build real things together",
       "30% off all future bootcamps ~ locked as long as you stay",
@@ -186,7 +186,7 @@ const THREE_DOORS: DoorOption[] = [
     bestFor:
       "You're done waiting. You want the full transformation, not just the inspiration.",
     whatYouGet: [
-      "9 live sessions ~ Tuesdays & Thursdays, small groups",
+      "9 live sessions ~ Saturdays & Sundays, small groups",
       "Week 1: AI foundations + first Claude Project live",
       "Week 2: AI content engine built and running",
       "Week 3: AI employees in your workflows",
@@ -540,7 +540,7 @@ export function BootcampPreview({ C, mono, sans, serif, scale = 1 }: SlideProps)
               June 2026 Schedule
             </span>
             <span style={{ ...sans, fontSize: sz(13), color: C.muted }}>
-              Tuesdays &amp; Thursdays · 10 AM EDT · 3 hrs each
+              Sat &amp; Sun · 10 AM–1 PM EST · 3 hrs each
             </span>
           </div>
         </div>
@@ -554,15 +554,15 @@ export function BootcampPreview({ C, mono, sans, serif, scale = 1 }: SlideProps)
           }}
         >
           {[
-            { session: "Kickoff", date: "Tue Jun 2", topic: "Welcome, orientation, Claude.ai setup" },
-            { session: "W1 · S1", date: "Thu Jun 5", topic: "The interface, Projects, your first conversation" },
-            { session: "W1 · S2", date: "Tue Jun 10", topic: "Custom instructions, file uploads" },
-            { session: "W2 · S3", date: "Thu Jun 12", topic: "AI employees ~ what Cowork makes real" },
-            { session: "W2 · S4", date: "Tue Jun 17", topic: "Build and test your first AI employee live" },
-            { session: "W3 · S5", date: "Thu Jun 19", topic: "Claude Code ~ your first build" },
-            { session: "W3 · S6", date: "Tue Jun 24", topic: "Build your business dashboard" },
-            { session: "W4 · S7", date: "Thu Jun 26", topic: "Your full Claude stack working together" },
-            { session: "W4 · S8", date: "Tue Jul 1", topic: "Showcases, Q&A, and graduation" },
+            { session: "Kickoff", date: "Fri Jun 5", topic: "Welcome, orientation, Claude.ai setup" },
+            { session: "W1 · S1", date: "Sat Jun 6", topic: "The interface, Projects, your first conversation" },
+            { session: "W1 · S2", date: "Sun Jun 7", topic: "Custom instructions, file uploads" },
+            { session: "W2 · S3", date: "Sat Jun 13", topic: "AI employees ~ what Cowork makes real" },
+            { session: "W2 · S4", date: "Sun Jun 14", topic: "Build and test your first AI employee live" },
+            { session: "W3 · S5", date: "Sat Jun 20", topic: "Claude Code ~ your first build" },
+            { session: "W3 · S6", date: "Sun Jun 21", topic: "Build your business dashboard" },
+            { session: "W4 · S7", date: "Sat Jun 27", topic: "Your full Claude stack working together" },
+            { session: "W4 · S8", date: "Sun Jun 28", topic: "Showcases, Q&A, and graduation" },
           ].map((r, i) => (
             <>
               <div
@@ -605,7 +605,7 @@ export function BootcampPreview({ C, mono, sans, serif, scale = 1 }: SlideProps)
                   whiteSpace: "nowrap",
                 }}
               >
-                4–7 PM CEST
+                10 AM–1 PM EST
               </div>
             </>
           ))}

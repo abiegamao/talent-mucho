@@ -136,8 +136,8 @@ function Curriculum() {
 
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                { icon: <Calendar className="w-3.5 h-3.5" />, label: "Starts Tue, Jun 2" },
-                { icon: <Clock className="w-3.5 h-3.5" />, label: "Tue & Thu · 4–7 PM CEST" },
+                { icon: <Calendar className="w-3.5 h-3.5" />, label: "Starts Fri, Jun 5" },
+                { icon: <Clock className="w-3.5 h-3.5" />, label: "Sat & Sun · 10 AM–1 PM EST" },
                 { icon: <Users className="w-3.5 h-3.5" />, label: "Small group · live on Zoom" },
               ].map(({ icon, label }) => (
                 <span
@@ -534,7 +534,7 @@ function Curriculum() {
               className="text-beige-50 text-lg font-light italic mt-8"
               style={{ fontFamily: "var(--font-cormorant), ui-serif, Georgia, serif" }}
             >
-              See you Tuesday, June 2.
+              See you Friday, June 5.
             </p>
             <p className="text-sm text-beige-300/70 font-light mt-3">
               ~ Abie &amp; Meri
@@ -565,7 +565,7 @@ function SetupSection() {
               className="text-4xl md:text-5xl font-light text-beige-50 mb-4 leading-tight"
               style={{ fontFamily: "var(--font-cormorant), ui-serif, Georgia, serif" }}
             >
-              Get this done <em className="italic text-clay-500">before</em> Tue, Jun 2.
+              Get this done <em className="italic text-clay-500">before</em> Fri, Jun 5.
             </h2>
             <p className="text-beige-200 font-light leading-relaxed">
               We want you building from minute 1 of Kickoff ~ not troubleshooting installs. Take 30 minutes this week to work through this list.

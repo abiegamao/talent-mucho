@@ -17,7 +17,7 @@ export interface SessionData {
 export const SESSIONS: SessionData[] = [
   {
     num: "Kickoff",
-    date: "Tue, Jun 2",
+    date: "Fri, Jun 5",
     title: "Welcome &",
     italic: "orientation",
     weekColor: "#C4A882",
@@ -33,7 +33,7 @@ export const SESSIONS: SessionData[] = [
   },
   {
     num: "W1·S1",
-    date: "Thu, Jun 5",
+    date: "Sat, Jun 6",
     title: "The interface,",
     italic: "Projects",
     weekColor: "#C4A882",
@@ -49,7 +49,7 @@ export const SESSIONS: SessionData[] = [
   },
   {
     num: "W1·S2",
-    date: "Tue, Jun 10",
+    date: "Sun, Jun 7",
     title: "Custom instructions,",
     italic: "file uploads",
     weekColor: "#C4A882",
@@ -65,7 +65,7 @@ export const SESSIONS: SessionData[] = [
   },
   {
     num: "W2·S3",
-    date: "Thu, Jun 12",
+    date: "Sat, Jun 13",
     title: "AI employees ~",
     italic: "what Cowork makes real",
     weekColor: "#7D6B5A",
@@ -81,7 +81,7 @@ export const SESSIONS: SessionData[] = [
   },
   {
     num: "W2·S4",
-    date: "Tue, Jun 17",
+    date: "Sun, Jun 14",
     title: "Build and test",
     italic: "your first AI employee",
     weekColor: "#7D6B5A",
@@ -97,7 +97,7 @@ export const SESSIONS: SessionData[] = [
   },
   {
     num: "W3·S5",
-    date: "Thu, Jun 19",
+    date: "Sat, Jun 20",
     title: "Claude Code ~",
     italic: "your first build",
     weekColor: "#5A7A6B",
@@ -113,7 +113,7 @@ export const SESSIONS: SessionData[] = [
   },
   {
     num: "W3·S6",
-    date: "Tue, Jun 24",
+    date: "Sun, Jun 21",
     title: "Build your",
     italic: "business dashboard",
     weekColor: "#5A7A6B",
@@ -129,7 +129,7 @@ export const SESSIONS: SessionData[] = [
   },
   {
     num: "W4·S7",
-    date: "Thu, Jun 26",
+    date: "Sat, Jun 27",
     title: "Your full Claude stack",
     italic: "working together",
     weekColor: "#6B5A7A",
@@ -145,7 +145,7 @@ export const SESSIONS: SessionData[] = [
   },
   {
     num: "W4·S8",
-    date: "Tue, Jul 1",
+    date: "Sun, Jun 28",
     title: "Showcases &",
     italic: "graduation",
     weekColor: "#6B5A7A",

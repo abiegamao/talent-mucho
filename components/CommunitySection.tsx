@@ -20,7 +20,7 @@ export default function CommunitySection() {
                         <div className="inline-flex items-center gap-2 bg-clay-500/15 border border-clay-500/30 rounded-full px-4 py-2 mb-6">
                             <span className="w-2 h-2 rounded-full bg-clay-500 animate-pulse shrink-0" />
                             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-clay-500">
-                                300+ members · Live on Skool
+                                560+ members · Live on Skool
                             </span>
                         </div>
 
@@ -95,7 +95,7 @@ export default function CommunitySection() {
                                     <Zap className="w-5 h-5" />
                                 </div>
                                 <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-clay-500">
-                                    Starts Tue, Jun 2
+                                    Starts Sat, Jun 6
                                 </span>
                             </div>
                             <p
@@ -112,7 +112,7 @@ export default function CommunitySection() {
                             </p>
                             <ul className="flex flex-col gap-2 mb-6 flex-1">
                                 {[
-                                    "9 live sessions · Tue & Thu · 4–7 PM CEST",
+                                    "8 live sessions · Sat & Sun · 10 AM–1 PM EST (4–7 PM CEST · 10 PM–1 AM PHT)",
                                     "Four real deliverables you keep",
                                     "Small group · live mentorship",
                                     "VIP bundle included free (€397 value)",

@@ -9,12 +9,12 @@ import {
 export const metadata: Metadata = {
   title: "The Talent Mucho Community",
   description:
-    "Free Skool community ~ replays, vault, and Abie's AI Playbooks. Join 300+ members learning Claude alongside other operators. Premium membership opens July 2026 after Cohort 1 graduates.",
+    "Free Skool community ~ replays, vault, and Abie's AI Playbooks. Join 560+ members learning Claude alongside other operators. Premium membership opens July 2026 after Cohort 1 graduates.",
   alternates: { canonical: "/community" },
   openGraph: {
     title: "The Talent Mucho Community",
     description:
-      "Free Skool community ~ replays, vault, AI Playbooks. 300+ members learning Claude together.",
+      "Free Skool community ~ replays, vault, AI Playbooks. 560+ members learning Claude together.",
     url: "/community",
     type: "website",
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "The Talent Mucho Community",
-    description: "Free Skool community ~ 300+ members. Premium opens July 2026.",
+    description: "Free Skool community ~ 560+ members. Premium opens July 2026.",
     images: ["/assets/website-samples/hero_image.png"],
   },
 };
@@ -50,7 +50,7 @@ const freePerks = [
   },
   {
     icon: <Users className="w-4 h-4" />,
-    title: "300+ members",
+    title: "560+ members",
     desc: "Founders, coaches, agencies, freelancers ~ all learning AI alongside you.",
   },
   {
@@ -98,7 +98,7 @@ const faqs = [
   },
   {
     q: "What's in the free community right now?",
-    a: "Replays of public events, the free vault (prompts and frameworks cleaned up after each session), Abie's AI Playbook library, and 300+ members posting wins, questions, and resources every week.",
+    a: "Replays of public events, the free vault (prompts and frameworks cleaned up after each session), Abie's AI Playbook library, and 560+ members posting wins, questions, and resources every week.",
   },
   {
     q: "Will premium have a founding rate?",
@@ -132,7 +132,7 @@ export default function CommunityPage() {
             <div className="inline-flex items-center gap-2 bg-white border border-clay-500/30 rounded-full px-4 py-2 mb-7">
               <span className="w-2 h-2 rounded-full bg-clay-500 animate-pulse shrink-0" />
               <span className="text-xs font-semibold uppercase tracking-[0.18em] text-clay-500">
-                300+ members · Live on Skool
+                560+ members · Live on Skool
               </span>
             </div>
 
@@ -285,7 +285,7 @@ export default function CommunityPage() {
                 <Calendar className="w-5 h-5 text-clay-500 mt-1" />
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.22em] text-clay-500 mb-1">
-                    Cohort 1 · Starts Tue, Jun 2, 2026
+                    Cohort 1 · Starts Fri, Jun 5, 2026
                   </p>
                   <p className="text-2xl md:text-3xl font-light text-beige-50 leading-tight"
                     style={{ fontFamily: "var(--font-cormorant), ui-serif, Georgia, serif" }}
@@ -295,7 +295,7 @@ export default function CommunityPage() {
                 </div>
               </div>
               <p className="text-beige-200 font-light leading-relaxed mb-6 text-sm">
-                Tuesdays &amp; Thursdays · 4–7 PM CEST · Live on Zoom · Small group with live
+                Sat &amp; Sun · 10 AM–1 PM EST · Live on Zoom · Small group with live
                 mentorship from Abie &amp; Meri. VIP bundle included free (€397 value).
               </p>
               <Link

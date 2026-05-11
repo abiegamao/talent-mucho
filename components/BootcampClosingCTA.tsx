@@ -15,7 +15,7 @@ export default function BootcampClosingCTA() {
                     <div className="inline-flex items-center gap-2 bg-white border border-clay-500/30 rounded-full px-4 py-2 mb-7">
                         <Calendar className="w-3.5 h-3.5 text-clay-500" />
                         <span className="text-xs font-semibold uppercase tracking-[0.18em] text-clay-500">
-                            Cohort 1 starts Tuesday, June 2
+                            Cohort 1 starts Saturday, June 6
                         </span>
                     </div>
 

@@ -84,7 +84,7 @@ export const FREE_SESSION: SalesSession = {
       tip: "The person who shares a dashboard with real business context makes the entire room want theirs. Specificity converts. If someone shares something vague, coach them live: 'What's one real client you're waiting on? Add them to the instructions right now and re-run it.' The live fix is more powerful than a perfect demo.",
     },
   ],
-  transitionScript: "\"What you just built — that's the ops layer of the AI version of you. In 30 minutes, with a free account, you trained Claude to know your business and brief you every morning. Here's what I want you to sit with: most business owners start every day by digging through their inbox to figure out what's on fire. You just built the thing that does that for you. But that's one layer. The bootcamp builds four. Week 1: your full ops system — three Claude Projects, one for ops, one for voice, one for clients. Each one knows a different part of your business. Week 2: your AI employee in Cowork — she has file access, she executes tasks, she runs without you. Week 3: Claude Code — you describe what you want in plain English, Claude writes the software, you leave with a dashboard you built yourself and can actually use. Week 4: everything runs together in under 10 minutes a day. €247. 9 live sessions starting June 2. 4 deliverables you keep. That's the AI version of yourself. Let me show you exactly what each session builds.\"",
+  transitionScript: "\"What you just built — that's the ops layer of the AI version of you. In 30 minutes, with a free account, you trained Claude to know your business and brief you every morning. Here's what I want you to sit with: most business owners start every day by digging through their inbox to figure out what's on fire. You just built the thing that does that for you. But that's one layer. The bootcamp builds four. Week 1: your full ops system — three Claude Projects, one for ops, one for voice, one for clients. Each one knows a different part of your business. Week 2: your AI employee in Cowork — she has file access, she executes tasks, she runs without you. Week 3: Claude Code — you describe what you want in plain English, Claude writes the software, you leave with a dashboard you built yourself and can actually use. Week 4: everything runs together in under 10 minutes a day. €247. 9 live sessions starting June 5. 4 deliverables you keep. That's the AI version of yourself. Let me show you exactly what each session builds.\"",
   pitchPoints: [
     "\"What you built today is the ops layer. The bootcamp builds all four — ops, voice, AI employee, and a real dashboard with code.\"",
     "\"Week 1: 3 Claude Projects — your ops (started today), your voice, your clients. Claude trained on your actual business, not a template.\"",
@@ -117,19 +117,19 @@ export const FREE_SESSION: SalesSession = {
     },
     {
       objection: "I'm not sure I have time for 9 sessions",
-      response: "\"Sessions are Tuesday and Thursday, 4–7 PM CEST. Recordings go up within 24 hours. Miss one, watch the replay, still complete the deliverable. Between sessions it's 15–30 minutes a day. Most students tell us they're saving time by Week 3 because their AI stack is handling the repetitive stuff.\"",
+      response: "\"Kickoff is Friday Jun 5, 6–8 PM EST. Weekly sessions are Saturdays and Sundays, 10 AM–1 PM EST. Recordings go up within 24 hours. Miss one, watch the replay, still complete the deliverable. Between sessions it's 15–30 minutes a day. Most students tell us they're saving time by Week 3 because their AI stack is handling the repetitive stuff.\"",
     },
     {
       objection: "Does this work if I'm not in Europe?",
-      response: "\"4–7 PM CEST: that's 10 AM New York, 7 AM LA, 10 PM Manila, midnight in Dubai. We have students joining from Philippines, West Africa, Latin America. Recordings are always there for anyone who can't make it live.\"",
+      response: "\"10 AM–1 PM EST: that's 4–7 PM Madrid, 7 AM LA, 10 PM Manila. Recordings are always there for anyone who can't make it live.\"",
     },
   ],
-  closingScript: "\"The link is going live right now. Mary is dropping it in chat. €247 founding price — closes tonight at midnight. After that it's €397 for Cohort 2. [Pause 10 seconds.] You came today because you wanted to see what AI can actually do. You're leaving with a Claude that knows your business and briefs you every morning. That's the ops layer. The bootcamp builds the other three — your voice, your AI employee, your dashboard. The full AI version of you. 4 weeks. Live with us. We'd love to have you on June 2. Link is in chat.\"",
+  closingScript: "\"The link is going live right now. Mary is dropping it in chat. €247 founding price — closes tonight at midnight. After that it's €397 for Cohort 2. [Pause 10 seconds.] You came today because you wanted to see what AI can actually do. You're leaving with a Claude that knows your business and briefs you every morning. That's the ops layer. The bootcamp builds the other three — your voice, your AI employee, your dashboard. The full AI version of you. 4 weeks. Live with us. We'd love to have you on June 5. Link is in chat.\"",
   urgencyMechanics: [
     "Mary drops the Stripe link in chat at exactly 1:40 — not before. Scarcity works better when the moment is earned.",
     "Say 'founding price closes tonight at midnight' at least 3 times in the last 20 minutes. Repetition isn't annoying — it's a reminder people need.",
     "After dropping the link, go silent for 10 full seconds. Don't fill it. Let people click.",
-    "If someone says 'I'm in' in chat, say their name out loud: 'Welcome, [Name] — see you June 2.' Real-time social proof converts the fence-sitters.",
+    "If someone says 'I'm in' in chat, say their name out loud: 'Welcome, [Name] — see you June 5.' Real-time social proof converts the fence-sitters.",
     "Reference the dashboard they just built: 'You saw what 30 minutes built. Imagine 4 weeks with that running every morning.' Use their own work as the pitch.",
     "Last 5 minutes: 'For anyone still on the fence — stay in the room, I'll answer anything privately for the next 5 minutes.'",
     "After the session ends: Mary sends a follow-up in Skool/chat with the link, one screenshot of a real dashboard output from today, and '24 hours left at founding price.'",
@@ -153,7 +153,7 @@ export interface SessionNote {
 export const PLAYBOOK: SessionNote[] = [
   {
     num: "Kickoff",
-    date: "Tue, Jun 2",
+    date: "Fri, Jun 5",
     title: "Welcome & Orientation",
     teachMin: 30,
     buildMin: 150,
@@ -172,13 +172,13 @@ export const PLAYBOOK: SessionNote[] = [
       "End demo: 'That took 8 minutes. Your turn.'",
     ],
     blocks: [
-      { problem: "I don't have Pro yet", fix: "Free works today — upgrade before Thursday. You'll hit limits in Week 2." },
+      { problem: "I don't have Pro yet", fix: "Free works today — upgrade before Saturday. You'll hit limits in Week 2." },
       { problem: "I don't know what project to pick", fix: "Ask: what takes most of your time right now? That's your project." },
       { problem: "My Claude looks different", fix: "UI varies. Follow the function, not the layout — same Claude under the hood." },
       { problem: "My docs are on Google Drive / Notion", fix: "Export as PDF or paste the text. Claude reads PDFs natively." },
     ],
     homeworkBrief: [
-      "Before Thursday (W1·S1):",
+      "Before Saturday (W1·S1):",
       "1. Your first Claude Project should be live with at least 2 docs uploaded.",
       "2. Choose your ONE project for the month — drop it in #cohort-1 on Skool by Wednesday midnight.",
       "3. If you're not on Pro yet, upgrade before Thursday. You will hit the free limit mid-session.",
@@ -192,7 +192,7 @@ export const PLAYBOOK: SessionNote[] = [
   },
   {
     num: "W1·S1",
-    date: "Thu, Jun 5",
+    date: "Sat, Jun 6",
     title: "The Interface, Projects",
     teachMin: 30,
     buildMin: 150,
@@ -217,7 +217,7 @@ export const PLAYBOOK: SessionNote[] = [
       { problem: "I uploaded PDFs but Claude ignores them", fix: "Start your prompt with 'Based on my uploaded docs...' to signal Claude to reference them." },
     ],
     homeworkBrief: [
-      "Before Tuesday (W1·S2):",
+      "Before Sunday (W1·S2):",
       "1. Write 5 prompts for your Voice project — things you actually write every week.",
       "2. Test each one. Screenshot your favourite output.",
       "3. Drop one screenshot in #wins on Skool.",
@@ -231,7 +231,7 @@ export const PLAYBOOK: SessionNote[] = [
   },
   {
     num: "W1·S2",
-    date: "Tue, Jun 10",
+    date: "Sun, Jun 7",
     title: "Custom Instructions, File Uploads",
     teachMin: 30,
     buildMin: 150,
@@ -259,7 +259,7 @@ export const PLAYBOOK: SessionNote[] = [
       "Week 1 deliverable due tonight:",
       "1. All 3 Claude Projects live (Operations Hub, Voice & Content, Client Hub).",
       "2. Post a screenshot of your 3 Projects in #cohort-1 on Skool — this is your Week 1 completion.",
-      "3. Before Thursday: read the Cowork setup guide in the Skool vault. We're installing it live in W2·S3.",
+      "3. Before Saturday: read the Cowork setup guide in the Skool vault. We're installing it live in W2·S3.",
     ],
     talkingPoints: [
       "Files Claude reads well: PDF, DOCX, CSV, TXT. Avoid images of text — paste the text instead.",
@@ -270,7 +270,7 @@ export const PLAYBOOK: SessionNote[] = [
   },
   {
     num: "W2·S3",
-    date: "Thu, Jun 12",
+    date: "Sat, Jun 13",
     title: "AI Employees — What Cowork Makes Real",
     teachMin: 35,
     buildMin: 145,
@@ -295,7 +295,7 @@ export const PLAYBOOK: SessionNote[] = [
       { problem: "I'm on Windows and the install guide is Mac-only", fix: "Mary has the Windows guide — drop your name in chat and she'll send the direct link." },
     ],
     homeworkBrief: [
-      "Before Tuesday (W2·S4):",
+      "Before Sunday (W2·S4):",
       "1. Cowork is installed and you've successfully run one task on a test folder.",
       "2. Think of 3 recurring tasks you hate doing manually. Pick the one Claude could do if it had file access.",
       "3. Write a one-paragraph 'brief' for that task — what it does, what good output looks like, what it should never touch.",
@@ -309,7 +309,7 @@ export const PLAYBOOK: SessionNote[] = [
   },
   {
     num: "W2·S4",
-    date: "Tue, Jun 17",
+    date: "Sun, Jun 14",
     title: "Build and Test Your First AI Employee",
     teachMin: 30,
     buildMin: 150,
@@ -337,7 +337,7 @@ export const PLAYBOOK: SessionNote[] = [
       "Week 2 deliverable due tonight:",
       "1. Your named AI employee is in Cowork with a brief that passes at least 4 of 5 stress-test scenarios.",
       "2. Post your employee name + role in #cohort-1. One sentence: 'My AI employee [Name] handles [task].'",
-      "3. Before Thursday: watch the Claude Code intro in the Skool vault. We're building live in W3·S5.",
+      "3. Before Saturday: watch the Claude Code intro in the Skool vault. We're building live in W3·S5.",
     ],
     talkingPoints: [
       "The 4-part brief: Role (what they do), Scope (what they touch), Output (format and length), Guardrails (what they never do).",
@@ -348,7 +348,7 @@ export const PLAYBOOK: SessionNote[] = [
   },
   {
     num: "W3·S5",
-    date: "Thu, Jun 19",
+    date: "Sat, Jun 20",
     title: "Claude Code — Your First Build",
     teachMin: 35,
     buildMin: 145,
@@ -374,7 +374,7 @@ export const PLAYBOOK: SessionNote[] = [
       { problem: "I'm scared I'll break my computer", fix: "Claude Code only touches the folder you're working in. It can't reach system files. You're safe." },
     ],
     homeworkBrief: [
-      "Before Tuesday (W3·S6):",
+      "Before Sunday (W3·S6):",
       "1. Your Week 3 S5 build is open and working on your computer.",
       "2. Make one change to it yourself — in plain English to Claude Code. Just one.",
       "3. Screenshot the thing you built and drop it in #wins. Include one sentence: what it does.",
@@ -388,7 +388,7 @@ export const PLAYBOOK: SessionNote[] = [
   },
   {
     num: "W3·S6",
-    date: "Tue, Jun 24",
+    date: "Sun, Jun 21",
     title: "Build Your Business Dashboard",
     teachMin: 30,
     buildMin: 150,
@@ -427,7 +427,7 @@ export const PLAYBOOK: SessionNote[] = [
   },
   {
     num: "W4·S7",
-    date: "Thu, Jun 26",
+    date: "Sat, Jun 27",
     title: "Your Full Claude Stack Working Together",
     teachMin: 30,
     buildMin: 150,
@@ -451,7 +451,7 @@ export const PLAYBOOK: SessionNote[] = [
       { problem: "My stack feels fragile / I'm scared it'll break", fix: "Everything is reversible. Claude Code tools can be rebuilt. Projects can be updated. The system is yours to change." },
     ],
     homeworkBrief: [
-      "Before Tuesday (W4·S8 graduation):",
+      "Before Sunday (W4·S8 graduation):",
       "1. Run your 3-moments-a-day routine for 3 consecutive days.",
       "2. Write one paragraph: what changed? What surprised you? What broke?",
       "3. Prepare a 2-minute showcase: what you built, what it does, one thing you'd do differently.",
@@ -465,7 +465,7 @@ export const PLAYBOOK: SessionNote[] = [
   },
   {
     num: "W4·S8",
-    date: "Tue, Jul 1",
+    date: "Sun, Jun 28",
     title: "Showcases & Graduation",
     teachMin: 60,
     buildMin: 120,

@@ -557,7 +557,7 @@ export const SEGMENTS: Segment[] = [
         id: 'ns4', title: 'The Bootcamp offer', speaker: 'ABIE', blocks: [
           { type: 'stage', text: "Anchor high before you name the price. Let the €644 value land first. Then pause. Then give the number. Don't apologise for it." },
           { type: 'scripted', speaker: 'ABIE', text: "So here's what's open right now. And I do mean right now ~ this specific window closes at midnight tonight." },
-          { type: 'scripted', speaker: 'ABIE', text: "The AI Business Bootcamp. One month. 9 live sessions, Tuesdays and Thursdays. Small groups ~ we capped it because we actually want to mentor you, not broadcast at you." },
+          { type: 'scripted', speaker: 'ABIE', text: "The AI Business Bootcamp. One month. 9 live sessions, Saturdays and Sundays. Small groups ~ we capped it because we actually want to mentor you, not broadcast at you." },
           { type: 'scripted', speaker: 'ABIE', text: "Four weeks, four real deliverables. Week 1 ~ your AI foundations and first Claude Project live. Week 2 ~ your AI content engine built and running. Week 3 ~ AI employees in your workflows, proposals drafting themselves. Week 4 ~ your personal dashboard, live. An AI routine that runs whether you show up or not." },
           { type: 'scripted', speaker: 'ABIE', text: "A consultant charges €150 an hour to teach you this. Nine sessions at that rate is €1,350. We're at €9.15 a session. The full programme is €247." },
           { type: 'stage', text: "Pause here. Don't speak. Let the contrast sit for 3 full seconds." },

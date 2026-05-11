@@ -9,12 +9,12 @@ import {
 export const metadata: Metadata = {
   title: "AI Business Bootcamp · Cohort 1",
   description:
-    "One month. 9 live sessions. Four deliverables. €247 founding price (€397 next cohort) ~ VIP bundle included free. June 2026, Tuesdays & Thursdays, live on Zoom.",
+    "One month. 9 live sessions. Four deliverables. €247 founding price (€397 next cohort) ~ VIP bundle included free. June 2026, Saturdays & Sundays, live on Zoom.",
   alternates: { canonical: "/events/bootcamp" },
   openGraph: {
     title: "AI Business Bootcamp · Cohort 1",
     description:
-      "One month. Three tools. A business that runs differently. €247 founding price, VIP bundle free. Starts June 2, 2026.",
+      "One month. Three tools. A business that runs differently. €247 founding price, VIP bundle free. Starts June 5, 2026.",
     url: "/events/bootcamp",
     type: "website",
     images: [
@@ -72,15 +72,15 @@ const weeks = [
 ];
 
 const schedule = [
-  { tag: "Kickoff", date: "Tue, Jun 2", topic: "Welcome, orientation, Claude.ai setup", color: "#C4A882" },
-  { tag: "W1 · S1", date: "Thu, Jun 5", topic: "The interface, Projects, your first conversation", color: "#C4A882" },
-  { tag: "W1 · S2", date: "Tue, Jun 10", topic: "Custom instructions, file uploads", color: "#C4A882" },
-  { tag: "W2 · S3", date: "Thu, Jun 12", topic: "AI employees ~ what Cowork makes real", color: "#7D6B5A" },
-  { tag: "W2 · S4", date: "Tue, Jun 17", topic: "Build and test your first AI employee live", color: "#7D6B5A" },
-  { tag: "W3 · S5", date: "Thu, Jun 19", topic: "Claude Code ~ your first build", color: "#5A7A6B" },
-  { tag: "W3 · S6", date: "Tue, Jun 24", topic: "Build your business dashboard", color: "#5A7A6B" },
-  { tag: "W4 · S7", date: "Thu, Jun 26", topic: "Your full Claude stack working together", color: "#6B5A7A" },
-  { tag: "W4 · S8", date: "Tue, Jul 1", topic: "Showcases, Q&A, and graduation", color: "#6B5A7A" },
+  { tag: "Kickoff", date: "Fri, Jun 5", topic: "Welcome, orientation, Claude.ai setup", color: "#C4A882" },
+  { tag: "W1 · S1", date: "Sat, Jun 6", topic: "The interface, Projects, your first conversation", color: "#C4A882" },
+  { tag: "W1 · S2", date: "Sun, Jun 7", topic: "Custom instructions, file uploads", color: "#C4A882" },
+  { tag: "W2 · S3", date: "Sat, Jun 13", topic: "AI employees ~ what Cowork makes real", color: "#7D6B5A" },
+  { tag: "W2 · S4", date: "Sun, Jun 14", topic: "Build and test your first AI employee live", color: "#7D6B5A" },
+  { tag: "W3 · S5", date: "Sat, Jun 20", topic: "Claude Code ~ your first build", color: "#5A7A6B" },
+  { tag: "W3 · S6", date: "Sun, Jun 21", topic: "Build your business dashboard", color: "#5A7A6B" },
+  { tag: "W4 · S7", date: "Sat, Jun 27", topic: "Your full Claude stack working together", color: "#6B5A7A" },
+  { tag: "W4 · S8", date: "Sun, Jun 28", topic: "Showcases, Q&A, and graduation", color: "#6B5A7A" },
 ];
 
 const roiRows = [
@@ -200,8 +200,8 @@ export default function BootcampPage() {
 
               <div className="flex flex-wrap gap-3">
                 {[
-                  { icon: <Calendar className="w-3.5 h-3.5" />, label: "Starts Tue, Jun 2, 2026" },
-                  { icon: <Clock className="w-3.5 h-3.5" />, label: "Tue & Thu · 4–7 PM CEST" },
+                  { icon: <Calendar className="w-3.5 h-3.5" />, label: "Starts Fri, Jun 5, 2026" },
+                  { icon: <Clock className="w-3.5 h-3.5" />, label: "Sat & Sun · 10 AM–1 PM EST" },
                   { icon: <Video className="w-3.5 h-3.5" />, label: "Live on Zoom" },
                 ].map(({ icon, label }) => (
                   <span
@@ -432,7 +432,7 @@ export default function BootcampPage() {
               Nine sessions. <em className="italic text-clay-500">Mark them all.</em>
             </h2>
             <p className="text-beige-200 font-light leading-relaxed">
-              Tuesdays &amp; Thursdays · 10 AM EDT (4–7 PM CEST) · 3 hrs each. Sessions are recorded,
+              Kickoff Fri Jun 5 · 6–8 PM EST. Weekly sessions Sat &amp; Sun · 10 AM–1 PM EST · 3 hrs each. Sessions are recorded,
               but real transformation happens live.
             </p>
           </div>
@@ -462,7 +462,7 @@ export default function BootcampPage() {
                   {s.topic}
                 </span>
                 <span className="hidden md:inline text-[10px] text-beige-300/50 font-mono whitespace-nowrap">
-                  10 AM EDT
+                  {s.tag === "Kickoff" ? "6 PM EST" : "10 AM EST"}
                 </span>
               </div>
             ))}
@@ -777,7 +777,7 @@ export default function BootcampPage() {
                 },
                 {
                   q: "I'm not sure I have time for 9 sessions.",
-                  a: "Sessions are Tuesdays and Thursdays, 4–7 PM CEST. Recordings go up within 24 hours. Miss one, watch the replay, complete the deliverable. Between sessions it's 15–30 minutes a day ~ most students tell us they're saving time by Week 3 because their AI stack is handling the repetitive work.",
+                  a: "Kickoff is Friday Jun 5, 6–8 PM EST. Weekly sessions are Saturdays and Sundays, 10 AM–1 PM EST. Recordings go up within 24 hours. Miss one, watch the replay, complete the deliverable. Between sessions it's 15–30 minutes a day ~ most students tell us they're saving time by Week 3 because their AI stack is handling the repetitive work.",
                 },
                 {
                   q: "What if I don't have a business yet?",
@@ -785,7 +785,7 @@ export default function BootcampPage() {
                 },
                 {
                   q: "Does this work if I'm not in Europe?",
-                  a: "4–7 PM CEST is 10 AM New York, 7 AM LA, 10 PM Manila, midnight in Dubai. We have people joining from the Philippines, West Africa, and Latin America. Recordings are always there if you can't make it live ~ and the Skool community is active 24/7.",
+                  a: "10 AM–1 PM EST is 4–7 PM Madrid, 7 AM LA, 10 PM Manila. The kickoff (Fri Jun 5, 6–8 PM EST) is midnight Madrid time. We have people joining from the Philippines, West Africa, and Latin America. Recordings are always there if you can't make it live ~ and the Skool community is active 24/7.",
                 },
                 {
                   q: "What happens after Cohort 1 ends?",
@@ -946,7 +946,7 @@ export default function BootcampPage() {
             </a>
 
             <p className="mt-6 text-sm text-taupe-400 font-light italic">
-              Cohort 1 starts Tuesday, June 2, 2026.
+              Cohort 1 starts Saturday, June 6, 2026.
             </p>
           </div>
         </div>

@@ -270,7 +270,7 @@ export default function ClaudeEventPage() {
 
                 <div className="mt-5 pt-5 border-t border-beige-200">
                   <p className="text-xs text-taupe-400 font-light leading-relaxed text-center">
-                    Want the full experience? The bootcamp starts June 2 ~ 9 live sessions, 4 deliverables, your AI version built from scratch.
+                    Want the full experience? The bootcamp starts June 6 ~ 9 live sessions, 4 deliverables, your AI version built from scratch.
                   </p>
                 </div>
               </div>
@@ -383,7 +383,7 @@ export default function ClaudeEventPage() {
               </div>
 
               <div className="bg-charcoal-900 rounded-3xl p-8 text-left">
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-clay-500 mb-6">Cohort 1 · Jun 2 – Jul 1</p>
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-clay-500 mb-6">Cohort 1 · Jun 5 – Jun 28</p>
                 {[
                   { week: "Week 1", title: "Your Claude Projects", desc: "Voice, ops, clients ~ Claude trained on your actual business" },
                   { week: "Week 2", title: "Your AI Employee", desc: "Cowork with file access ~ it executes tasks while you sleep" },
@@ -442,7 +442,7 @@ export default function ClaudeEventPage() {
                     className="text-7xl md:text-8xl font-light text-charcoal-900 leading-none"
                     style={{ fontFamily: "var(--font-cormorant), ui-serif, Georgia, serif" }}
                   >
-                    <em className="italic text-clay-500">300+</em>
+                    <em className="italic text-clay-500">560+</em>
                   </div>
                   <p className="text-sm font-semibold uppercase tracking-[0.18em] text-taupe-400 mt-2">
                     members
@@ -463,7 +463,7 @@ export default function ClaudeEventPage() {
                     300 people said yes. <em className="italic text-clay-500">Will you?</em>
                   </h2>
                   <p className="text-espresso-800 font-light leading-relaxed text-base mb-5">
-                    Our Skool community passed 300 members. Founders, VAs, freelancers, and operators ~ all building with AI together. <span className="text-clay-500 font-medium">Free to join.</span>
+                    Our Skool community passed 560 members. Founders, VAs, freelancers, and operators ~ all building with AI together. <span className="text-clay-500 font-medium">Free to join.</span>
                   </p>
 
                   <div className="flex items-center gap-3">
@@ -776,7 +776,7 @@ export default function ClaudeEventPage() {
               You watched the intro. Now build the real thing.
             </h2>
             <p className="text-espresso-800/70 font-light leading-relaxed mb-8">
-              The bootcamp starts June 2. 9 live sessions. 4 weeks. You leave with the AI version of yourself ~ built live, owned forever.
+              The bootcamp starts June 6. 9 live sessions. 4 weeks. You leave with the AI version of yourself ~ built live, owned forever.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link

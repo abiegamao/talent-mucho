@@ -16,7 +16,7 @@ export default function EventPromoStrip() {
                             </p>
                             <p className="text-white/70 text-xs flex items-center gap-1.5 mt-0.5">
                                 <Calendar className="w-3 h-3" />
-                                Starts June 2, 2026 · 9 live sessions · VIP bundle included free
+                                Starts June 6, 2026 · 9 live sessions · VIP bundle included free
                             </p>
                         </div>
                     </div>

@@ -41,7 +41,7 @@ export default function Hero() {
                 Cohort 1
               </span>
               <span className="text-espresso-800 text-sm font-medium">
-                AI Business Bootcamp · €247 · Starts June 2
+                AI Business Bootcamp · €247 · Kickoff Fri, Jun 5
               </span>
               <ArrowRight className="w-3.5 h-3.5 text-clay-500 group-hover:translate-x-1 transition-transform" />
             </a>
@@ -60,7 +60,7 @@ export default function Hero() {
 
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-espresso-800 max-w-xl mb-8 leading-relaxed opacity-0 animate-fade-in-up animation-delay-200">
-              Cohort 1 of the AI Business Bootcamp starts <span className="font-semibold text-charcoal-900">Tuesday, June 2</span>. Nine live sessions, four real deliverables you keep, small-group mentorship from operators who run their own AI stacks every day.
+              Cohort 1 of the AI Business Bootcamp kicks off <span className="font-semibold text-charcoal-900">Friday, June 5</span>. Nine live sessions, four real deliverables you keep, small-group mentorship from operators who run their own AI stacks every day.
             </p>
 
             {/* Bullet Points ~ bootcamp deliverables */}
