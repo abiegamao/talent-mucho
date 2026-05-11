@@ -115,9 +115,56 @@ export default function BootcampWelcomePage() {
       </section>
 
       {/* ══════════════════════════════════════
-          2. PIN + INSIDE ACCESS
+          2. STEP 01 ~ BUILD YOUR BOOTCAMP MAP
       ══════════════════════════════════════ */}
       <section className="py-14 bg-beige-100 border-y border-beige-200">
+        <div className="section-container">
+          <div className="max-w-3xl mx-auto bg-clay-500/10 border-2 border-clay-500/40 rounded-2xl p-7 md:p-9 shadow-elegant relative overflow-hidden">
+            <div className="absolute -top-12 -right-12 w-48 h-48 bg-clay-500/15 rounded-full blur-3xl pointer-events-none" />
+            <div className="relative">
+              <div className="flex items-start gap-4 mb-5">
+                <div className="w-11 h-11 rounded-xl bg-clay-500/20 flex items-center justify-center shrink-0 text-clay-500">
+                  <Sparkles className="w-5 h-5" />
+                </div>
+                <div className="flex-1">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-clay-500 mb-2">
+                    Step 01 · Before anything else
+                  </p>
+                  <h2
+                    className="text-2xl md:text-3xl font-light text-charcoal-900 leading-tight"
+                    style={{ fontFamily: "var(--font-cormorant), ui-serif, Georgia, serif" }}
+                  >
+                    Build your <em className="italic text-clay-500">Bootcamp Map</em>
+                  </h2>
+                </div>
+              </div>
+
+              <p className="text-sm md:text-base text-espresso-800 font-light leading-relaxed mb-6">
+                10 questions, ~4 minutes. Your answers pre-configure your 3 Projects, your AI employee,
+                your dashboard, and your daily ritual. By Friday June 5, the bootcamp is already shaped around you.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-4">
+                <Link
+                  href="/events/bootcamp/intake"
+                  className="inline-flex items-center gap-2 bg-clay-500 hover:bg-clay-600 text-beige-50 font-medium text-base px-7 py-3.5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                >
+                  Start your map
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <p className="text-xs text-taupe-400 font-light italic">
+                  You can come back to it any time — we save as you go.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          3. PIN + INSIDE ACCESS
+      ══════════════════════════════════════ */}
+      <section className="py-14 bg-beige-50 border-b border-beige-200">
         <div className="section-container">
           <div className="max-w-3xl mx-auto bg-white border border-beige-200 rounded-2xl p-7 md:p-9 shadow-elegant">
             <div className="flex items-start gap-4 mb-5">
@@ -126,7 +173,7 @@ export default function BootcampWelcomePage() {
               </div>
               <div className="flex-1">
                 <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-clay-500 mb-2">
-                  Step 01 · Save this access PIN
+                  Step 02 · Save this access PIN
                 </p>
                 <p
                   className="text-2xl md:text-3xl font-light text-charcoal-900 leading-tight"

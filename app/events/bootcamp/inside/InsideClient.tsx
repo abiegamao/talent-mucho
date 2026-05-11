@@ -1,29 +1,81 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import {
   Calendar, Clock, Check, Apple, Monitor, Terminal, Download,
-  Users, BookOpen, Hammer, Sparkles, Heart, AlertCircle,
+  Users, BookOpen, Hammer, Sparkles, Heart, AlertCircle, ArrowRight, Edit3,
 } from "lucide-react";
 import {
   SESSIONS, COMMON_SETUP, MAC_SETUP, WINDOWS_SETUP, OUTCOMES,
   SESSION_ANATOMY, WONT_COVER, ROOM_CODE,
 } from "./curriculum-data";
+import type { IntakeResponse } from "@/lib/intake/types";
+import {
+  aiEmployeeLabel,
+  dashboardMetricLabel,
+  morningMoment,
+} from "@/lib/intake/personalize";
 
 const PIN = "2028";
 const STORAGE_KEY = "tm_bootcamp_inside_unlocked";
+const EMAIL_LOCAL_KEY = "bootcamp-intake-email";
 
 export default function InsideClient() {
   const [unlocked, setUnlocked] = useState<boolean | null>(null);
+  const [intake, setIntake] = useState<IntakeResponse | null>(null);
+  const [intakeLoaded, setIntakeLoaded] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
     setUnlocked(window.sessionStorage.getItem(STORAGE_KEY) === "1");
   }, []);
 
+  // Fetch intake by email (if we have one) after unlock
+  useEffect(() => {
+    if (!unlocked) return;
+    if (intakeLoaded) return;
+    let cancelled = false;
+    (async () => {
+      let email: string | null = null;
+      try {
+        email =
+          localStorage.getItem(EMAIL_LOCAL_KEY) ||
+          sessionStorage.getItem(EMAIL_LOCAL_KEY);
+      } catch { /* ignore */ }
+      if (!email) {
+        setIntakeLoaded(true);
+        return;
+      }
+      try {
+        const res = await fetch(
+          `/api/events/bootcamp/intake/${encodeURIComponent(email)}`,
+        );
+        if (res.ok) {
+          const data = (await res.json()) as IntakeResponse;
+          if (!cancelled) setIntake(data);
+        }
+      } catch {
+        /* ignore — fall through to unpersonalized view */
+      } finally {
+        if (!cancelled) setIntakeLoaded(true);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [unlocked, intakeLoaded]);
+
   function handleUnlock() {
     window.sessionStorage.setItem(STORAGE_KEY, "1");
     setUnlocked(true);
+  }
+
+  function handleSetEmail(email: string) {
+    try {
+      localStorage.setItem(EMAIL_LOCAL_KEY, email.trim().toLowerCase());
+    } catch { /* ignore */ }
+    setIntakeLoaded(false); // trigger re-fetch
   }
 
   if (unlocked === null) {
@@ -34,7 +86,13 @@ export default function InsideClient() {
     return <PinGate onUnlock={handleUnlock} />;
   }
 
-  return <Curriculum />;
+  return (
+    <Curriculum
+      intake={intake}
+      intakeLoaded={intakeLoaded}
+      onSetEmail={handleSetEmail}
+    />
+  );
 }
 
 /* ──────────────────────────────────────────
@@ -103,9 +161,23 @@ function PinGate({ onUnlock }: { onUnlock: () => void }) {
 /* ──────────────────────────────────────────
    CURRICULUM (post-unlock)
 ────────────────────────────────────────── */
-function Curriculum() {
+function Curriculum({
+  intake,
+  intakeLoaded,
+  onSetEmail,
+}: {
+  intake: IntakeResponse | null;
+  intakeLoaded: boolean;
+  onSetEmail: (email: string) => void;
+}) {
+  const firstName = intake?.first_name?.trim();
   return (
     <>
+      {/* 0. INTAKE LOOKUP CALLOUT (only when we don't have intake yet) */}
+      {intakeLoaded && !intake && (
+        <IntakeLookupCallout onSetEmail={onSetEmail} />
+      )}
+
       {/* 1. HERO */}
       <section className="pt-20 pb-20 md:pt-28 md:pb-24 bg-beige-50">
         <div className="section-container">
@@ -124,10 +196,26 @@ function Curriculum() {
                 fontSize: "clamp(2.75rem, 6.5vw, 5rem)",
               }}
             >
-              Welcome to Cohort 1.
-              <br />
-              <em className="italic text-clay-500">Here&apos;s the map.</em>
+              {firstName ? (
+                <>
+                  Welcome back, {firstName}.
+                  <br />
+                  <em className="italic text-clay-500">Here&apos;s your map.</em>
+                </>
+              ) : (
+                <>
+                  Welcome to Cohort 1.
+                  <br />
+                  <em className="italic text-clay-500">Here&apos;s the map.</em>
+                </>
+              )}
             </h1>
+
+            {intake?.business_oneliner && (
+              <p className="text-base md:text-lg text-clay-500 font-light italic leading-relaxed max-w-2xl mx-auto mb-4">
+                &ldquo;{intake.business_oneliner}&rdquo;
+              </p>
+            )}
 
             <p className="text-lg md:text-xl text-espresso-800 font-light leading-relaxed max-w-2xl mx-auto mb-8">
               Bookmark this page. We&apos;ll keep updating it as the cohort progresses ~ schedule
@@ -198,32 +286,45 @@ function Curriculum() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {OUTCOMES.map((o) => (
-              <div key={o.week} className="bg-white border border-beige-200 rounded-2xl overflow-hidden flex flex-col">
-                <div className="px-5 py-4" style={{ background: o.color }}>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-beige-50/70">
-                    {o.week}
-                  </p>
-                  <p
-                    className="text-xl font-light text-beige-50 leading-tight mt-1"
-                    style={{ fontFamily: "var(--font-cormorant), ui-serif, Georgia, serif" }}
-                  >
-                    {o.title}
-                  </p>
+            {OUTCOMES.map((o, idx) => {
+              const yourLine = intake ? personalizedOutcomeLine(idx, intake) : null;
+              return (
+                <div key={o.week} className="bg-white border border-beige-200 rounded-2xl overflow-hidden flex flex-col">
+                  <div className="px-5 py-4" style={{ background: o.color }}>
+                    <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-beige-50/70">
+                      {o.week}
+                    </p>
+                    <p
+                      className="text-xl font-light text-beige-50 leading-tight mt-1"
+                      style={{ fontFamily: "var(--font-cormorant), ui-serif, Georgia, serif" }}
+                    >
+                      {o.title}
+                    </p>
+                  </div>
+                  <div className="p-5 flex-1 flex flex-col gap-3">
+                    <p className="text-sm text-charcoal-900 font-light leading-relaxed">
+                      {o.desc}
+                    </p>
+                    {yourLine && (
+                      <div className="mt-auto pt-3 border-t border-beige-200">
+                        <p className="text-[10px] font-bold uppercase tracking-[0.18em] mb-1" style={{ color: o.color }}>
+                          Your version
+                        </p>
+                        <p className="text-sm font-medium text-charcoal-900 leading-snug">
+                          {yourLine}
+                        </p>
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <div className="p-5 flex-1">
-                  <p className="text-sm text-charcoal-900 font-light leading-relaxed">
-                    {o.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* 4. PRE-BOOTCAMP SETUP */}
-      <SetupSection />
+      <SetupSection initialOs={intake?.os === "windows" ? "windows" : "mac"} />
 
       {/* 5. SESSION ANATOMY */}
       <section className="section-padding bg-beige-50">
@@ -534,11 +635,30 @@ function Curriculum() {
               className="text-beige-50 text-lg font-light italic mt-8"
               style={{ fontFamily: "var(--font-cormorant), ui-serif, Georgia, serif" }}
             >
-              See you Friday, June 5.
+              {firstName ? `See you Friday, June 5, ${firstName}.` : "See you Friday, June 5."}
             </p>
             <p className="text-sm text-beige-300/70 font-light mt-3">
               ~ Abie &amp; Meri
             </p>
+
+            {intake && (
+              <div className="mt-10 pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+                <Link
+                  href="/events/bootcamp/intake/done"
+                  className="inline-flex items-center gap-1.5 text-xs font-light text-beige-300/70 hover:text-beige-50 transition-colors"
+                >
+                  <Sparkles className="w-3 h-3" />
+                  View your full Bootcamp Map
+                </Link>
+                <Link
+                  href="/events/bootcamp/intake"
+                  className="inline-flex items-center gap-1.5 text-xs font-light text-beige-300/70 hover:text-beige-50 transition-colors"
+                >
+                  <Edit3 className="w-3 h-3" />
+                  Edit your map
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -547,10 +667,96 @@ function Curriculum() {
 }
 
 /* ──────────────────────────────────────────
+   INTAKE LOOKUP CALLOUT (top-of-page banner)
+────────────────────────────────────────── */
+function IntakeLookupCallout({
+  onSetEmail,
+}: {
+  onSetEmail: (email: string) => void;
+}) {
+  const [email, setEmail] = useState("");
+  const [dismissed, setDismissed] = useState(false);
+
+  if (dismissed) return null;
+
+  const submit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.trim()) return;
+    onSetEmail(email);
+    setDismissed(true);
+  };
+
+  return (
+    <section className="bg-clay-500/10 border-b-2 border-clay-500/30">
+      <div className="section-container py-5">
+        <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-4">
+          <div className="flex items-center gap-3 flex-1">
+            <Sparkles className="w-4 h-4 text-clay-500 shrink-0" />
+            <p className="text-sm text-charcoal-900 font-light leading-snug">
+              <span className="font-semibold">Personalize this page.</span>{" "}
+              Enter the email you used at checkout and we&apos;ll load your map.
+            </p>
+          </div>
+          <form onSubmit={submit} className="flex flex-col sm:flex-row gap-2 w-full md:w-auto">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="you@example.com"
+              className="bg-white border border-beige-300 focus:border-clay-500 focus:ring-2 focus:ring-clay-500/20 outline-none rounded-full px-4 py-2 text-sm font-light text-charcoal-900 placeholder:text-taupe-400/60 transition-all min-w-[240px]"
+            />
+            <button
+              type="submit"
+              className="inline-flex items-center justify-center gap-1.5 bg-clay-500 hover:bg-clay-600 text-beige-50 font-medium text-sm px-5 py-2 rounded-full transition-all duration-200 whitespace-nowrap"
+            >
+              Load my map
+              <ArrowRight className="w-3.5 h-3.5" />
+            </button>
+          </form>
+          <Link
+            href="/events/bootcamp/intake"
+            className="text-xs font-medium text-clay-500 hover:underline whitespace-nowrap"
+          >
+            No map yet? Build one →
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ──────────────────────────────────────────
+   PERSONALIZED OUTCOMES HELPER
+────────────────────────────────────────── */
+function personalizedOutcomeLine(idx: number, intake: IntakeResponse): string | null {
+  // Order in OUTCOMES is: W1 Projects, W2 AI Employee, W3 Dashboard, W4 Daily Ritual
+  if (idx === 0) {
+    const focus = intake.first_focus;
+    const labels: Record<string, string> = {
+      ops: "Ops first",
+      voice: "Voice first",
+      client: "Client work first",
+      sales: "Sales first",
+    };
+    return focus ? `${labels[focus] ?? "Your focus"} · 3 Projects loaded` : null;
+  }
+  if (idx === 1) return aiEmployeeLabel(intake);
+  if (idx === 2) {
+    const os = intake.os === "windows" ? "Windows" : "Mac";
+    return `${dashboardMetricLabel(intake)} · ${os}`;
+  }
+  if (idx === 3) {
+    const ritual = morningMoment(intake);
+    return `Morning moment · ${ritual.local}`;
+  }
+  return null;
+}
+
+/* ──────────────────────────────────────────
    SETUP SECTION (Mac/Windows tabs)
 ────────────────────────────────────────── */
-function SetupSection() {
-  const [os, setOs] = useState<"mac" | "windows">("mac");
+function SetupSection({ initialOs = "mac" }: { initialOs?: "mac" | "windows" }) {
+  const [os, setOs] = useState<"mac" | "windows">(initialOs);
   const items = os === "mac" ? MAC_SETUP : WINDOWS_SETUP;
 
   return (
